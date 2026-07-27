@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0d5b3a">
+  <meta name="description" content="Bombicz Katalin polgármesterjelölt kampányoldala.">
+  <title>Bombicz Katalin | Polgármesterjelölt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="language-switch" aria-label="Nyelvválasztó">
+        <span class="language-slider" aria-hidden="true"></span>
+
+        <button
+          class="language-button active"
+          type="button"
+          data-language="hu"
+          aria-pressed="true"
+        >
+          HU
+        </button>
+
+        <button
+          class="language-button"
+          type="button"
+          data-language="sk"
+          aria-pressed="false"
+        >
+          SK
+        </button>
+      </div>
+    </header>
+
+    <main id="page-content" class="page-content">
+      <section class="hero">
+        <!--
+          PORTRÉ CSERÉJE
+
+          1. Másold be a valódi képet az assets mappába portrait.jpg néven.
+          2. Az alábbi src értékét ne kelljen módosítanod.
+        -->
+        <div class="portrait-frame">
+          <img
+            src="assets/portrait-placeholder.svg"
+            data-placeholder-src="assets/portrait-placeholder.svg"
+            data-portrait-src="assets/portrait.jpg"
+            alt="Bombicz Katalin portréja"
+            id="portrait-image"
+          >
+        </div>
+
+        <h1 data-i18n="name">Bombicz Katalin</h1>
+        <p class="role" data-i18n="role">Polgármesterjelölt</p>
+
+        <div class="intro-lines" aria-label="Bemutatkozó üzenet">
+          <p data-i18n="intro1">Az otthonunk Szímő.</p>
+          <p data-i18n="intro2">Hiszem, hogy többre képes.</p>
+          <p data-i18n="intro3">Adjunk neki új lendületet!</p>
+        </div>
+      </section>
+
+      <div class="section-divider" aria-hidden="true">
+        <span></span>
+      </div>
+
+      <section class="feedback-section">
+        <h2 data-i18n="feedbackTitle">Mondd el, mi fontos Neked!</h2>
+
+        <p class="section-lead" data-i18n="feedbackLead">
+          Írd meg név nélkül az ötletedet, kérésedet vagy észrevételedet.
+        </p>
+
+        <form id="feedback-form" novalidate>
+          <label class="sr-only" for="message" data-i18n="messageLabel">
+            Üzenet
+          </label>
+
+          <textarea
+            id="message"
+            name="message"
+            maxlength="3000"
+            required
+            data-i18n-placeholder="messagePlaceholder"
+            placeholder="Írd ide az üzenetedet..."
+          ></textarea>
+
+          <input
+            class="honeypot"
+            type="text"
+            name="_gotcha"
+            tabindex="-1"
+            autocomplete="off"
+            aria-hidden="true"
+          >
+
+          <button id="submit-button" class="submit-button" type="submit">
+            <span data-i18n="submit">Beküldöm</span>
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M21.5 2.5 10.5 13.5M21.5 2.5l-7 19-4-8-8-4 19-7Z"
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-width="1.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+          <p
+            id="status-message"
+            class="status-message"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
+      </section>
+
+      <section class="contact-list" aria-label="Kapcsolat">
+        <article class="contact-card">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M7.2 3.5 9.8 8.1l-2.1 2c1.1 2.4 2.9 4.3 5.3 5.4l2-2.1 4.6 2.6c.6.4.8 1.1.5 1.8-.7 1.6-2.3 2.7-4.1 2.7C9.1 20.5 3.5 14.9 3.5 8c0-1.8 1.1-3.4 2.7-4.1.6-.3 1.3-.1 1 .4Z"
+              />
+            </svg>
+          </div>
+
+          <div>
+            <h3 data-i18n="phoneTitle">
+              Inkább elmondanád szóban?
+            </h3>
+
+            <a class="contact-link" href="tel:+421918976822">
+              <span data-i18n="phoneAction">Hívj fel!</span>
+              <span> +421 918 976 822</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="contact-card">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3.2a8.5 8.5 0 0 0-7.3 12.9L3.5 20.5l4.5-1.2A8.5 8.5 0 1 0 12 3.2Z"></path>
+              <path d="M8.4 8.1c.2-.4.4-.4.7-.4h.5c.2 0 .3.1.4.4l.7 1.7c.1.3.1.5-.1.7l-.6.7c-.2.2-.2.4-.1.6.6 1.2 1.5 2.1 2.7 2.7.2.1.4.1.6-.1l.8-1c.2-.2.4-.3.7-.2l1.8.8c.3.1.4.3.4.5 0 .5-.2 1.3-.6 1.7-.5.5-1.2.8-2 .8-1.1 0-2.7-.5-4.4-2-1.4-1.2-2.4-2.7-2.8-3.9-.4-1.1-.4-2.2.1-2.9.3-.5.7-.8 1.2-.8Z"></path>
+            </svg>
+          </div>
+
+          <div>
+            <h3>WhatsApp</h3>
+            <a
+              class="contact-link"
+              href="https://wa.me/421918976822"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              0918 976 822
+            </a>
+          </div>
+        </article>
+
+        <article class="contact-card">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M14.1 8.2h2.5V4.4c-.4-.1-1.9-.2-3.6-.2-3.5 0-5.9 2.1-5.9 6.1v3.4H3.2V18h3.9v10.8h4.8V18h4l.6-4.3h-4.6v-3c0-1.3.4-2.5 2.2-2.5Z" transform="scale(.75) translate(4 0)"></path>
+            </svg>
+          </div>
+
+          <div>
+            <h3>Facebook</h3>
+            <a
+              class="contact-link contact-link-wrap"
+              href="https://www.facebook.com/katarina.bombiczova"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              facebook.com/katarina.bombiczova
+            </a>
+          </div>
+        </article>
+
+        <article class="contact-card">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <rect x="4" y="4" width="16" height="16" rx="5"></rect>
+              <circle cx="12" cy="12" r="3.5"></circle>
+              <circle cx="17.4" cy="6.7" r="1"></circle>
+            </svg>
+          </div>
+
+          <div>
+            <h3>Instagram</h3>
+            <a
+              class="contact-link"
+              href="https://www.instagram.com/katarinabombiczova/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @katarinabombiczova
+            </a>
+          </div>
+        </article>
+
+        <article class="contact-card">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+              <path d="m4.5 7 7.5 6 7.5-6"></path>
+            </svg>
+          </div>
+
+          <div>
+            <h3>
+              <span data-i18n="mailTitle1">Nem szeretsz pötyögni?</span><br>
+              <span data-i18n="mailTitle2">Dobd a postaládámba!</span>
+            </h3>
+
+            <p data-i18n="address">
+              Szímő 282, 941 22
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <img
+        class="footer-line"
+        src="assets/footer-line.svg"
+        alt=""
+        aria-hidden="true"
+      >
+
+      <nav class="footer-links" aria-label="Jogi információk">
+        <a href="privacy.html" data-i18n="privacy">Adatkezelés</a>
+        <a href="imprint.html" data-i18n="imprint">Impresszum</a>
+      </nav>
+
+      <p class="copyright">
+        © <span id="year"></span> Bombicz Katalin
+      </p>
+    </footer>
+  </div>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
